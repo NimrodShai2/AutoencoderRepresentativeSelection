@@ -103,13 +103,13 @@ After training, each genome receives a **reconstruction MSE** score:
 
 - Lower MSE → genome closely matches latent patterns
 - Higher MSE → genome is anomalous or less represented
+- In other words: the lower the MSE, the more "typical" a genome is, based on the metadata features.
 
 This ranking can help:
 
 - Identify outliers
-- Select representative genomes for clustering
+- Select representative genomes
 - Pre-screen genomes for curation
-
 ---
 
 ## 🛠 Dependencies
