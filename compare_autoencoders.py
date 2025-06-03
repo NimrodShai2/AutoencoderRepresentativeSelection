@@ -25,12 +25,21 @@ def get_args():
     return parser.parse_args()
 
 
+# We only have 10 features, so the latent space will be small.
 architectures = [
     {"hidden_layers": [16], "latent_dim": 4},
     {"hidden_layers": [64], "latent_dim": 4},
+    {"hidden_layers": [64, 32], "latent_dim": 4},
     {"hidden_layers": [64, 32], "latent_dim": 8},
-    {"hidden_layers": [128, 64], "latent_dim": 16},
+    {"hidden_layers": [128, 64], "latent_dim": 4},
+    {"hidden_layers": [128, 64], "latent_dim": 8},
     {"hidden_layers": [64, 32, 16], "latent_dim": 8},
+    {"hidden_layers": [64, 32, 16], "latent_dim": 4},
+    {"hidden_layers": [128, 64, 32], "latent_dim": 8},
+    {"hidden_layers": [128, 64, 32], "latent_dim": 4},
+    {"hidden_layers": [256, 128, 64], "latent_dim": 8},
+    {"hidden_layers": [256, 128, 64], "latent_dim": 4}
+
 ]
 
 if __name__ == "__main__":
